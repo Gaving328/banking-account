@@ -33,7 +33,7 @@ class BankAccount:
 
     def withdraw(self, amount):
         # Withdraw funds if enough balance exists
-        if amount <= 0:
+        if amount <= 0:s
             print("Amount must be greater than zero.")
             return
         self.cursor.execute('SELECT balance FROM accounts WHERE user_id = ?', (self.user_id,))

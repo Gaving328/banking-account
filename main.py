@@ -15,8 +15,6 @@ while True:
 
     if choice == '1':
         # Call get_balance() once you've implemented it
-        balance = account.get_balance()
-        print(f"Your balance is: ${balance:.2f}")
         pass
     elif choice == '2':
         # Prompt for amount and call deposit()
