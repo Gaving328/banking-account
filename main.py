@@ -14,18 +14,26 @@ while True:
     choice = input("Enter your choice (1–4): ")
 
     if choice == '1':
-        # Call get_balance() once you've implemented it
         balance = account.get_balance()
         print(f"Your balance is: ${balance:.2f}")
-        pass
+    
     elif choice == '2':
-        # Prompt for amount and call deposit()
-        pass
+        try:
+            amount = float(input("Enter amount to deposit: "))
+            account.deposit(amount)
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+    
     elif choice == '3':
-        # Prompt for amount and call withdraw()
-        pass
+        try:
+            amount = float(input("Enter amount to withdraw: "))
+            account.withdraw(amount)
+        except ValueError:
+            print("Invalid input. Please enter a numeric value.")
+    
     elif choice == '4':
         print("Goodbye!")
         break
+    
     else:
         print("Invalid choice. Try again.")
